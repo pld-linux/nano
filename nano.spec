@@ -26,7 +26,7 @@ offering a few enhancements.
 
 %description -l pl
 nano to edytor wcze¶niej znany jako TIP (Tip to nIe Pico). Jego celem
-jest emulowanie Pico tak dobrze jk to mo¿liwe, jednocze¶nie oferuj±c
+jest emulowanie Pico tak dobrze jak to mo¿liwe, jednocze¶nie oferuj±c
 kilka rozszerzeñ.
 
 %prep
