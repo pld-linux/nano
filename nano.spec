@@ -11,6 +11,7 @@ Patch1:		%{name}-info.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +34,7 @@ kilka rozszerzeñ.
 %build
 rm -f missing m4/*.m4
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
@@ -44,8 +45,6 @@ CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-gzip -9nf README ChangeLog AUTHORS NEWS TODO
 
 %find_lang %{name}
 
@@ -60,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog AUTHORS NEWS TODO
 %attr(755,root,root) %{_bindir}/nano
 %{_mandir}/man1/*
 %{_infodir}/*info*
