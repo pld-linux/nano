@@ -1,6 +1,7 @@
 Summary:	nano (Nano's ANOther editor)
+Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	0.9.24
+Version:	0.9.25
 Release:	1
 License:	GPL
 Group:		Applications/Editors
@@ -23,7 +24,7 @@ offering a few enhancements.
 
 %build
 gettextize --copy --force
-CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"
+CFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -I/usr/include/ncurses"
 %configure
 %{__make}
 
