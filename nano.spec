@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.2/%{name}-%{version}.tar.gz
+# Source0-md5:	188d24b9cc4c1041ac58d6b6f7941eb4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
