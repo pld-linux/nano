@@ -31,7 +31,7 @@ kilka rozszerzeñ.
 rm -f missing m4/*
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure
 %{__make}
