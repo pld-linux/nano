@@ -1,35 +1,35 @@
---- nano-1.1.9/configure.ac.orig	Mon May 13 02:09:30 2002
-+++ nano-1.1.9/configure.ac	Mon May 13 08:05:15 2002
-@@ -4,9 +4,7 @@
- AC_CONFIG_SRCDIR([nano.c])
- AC_PREREQ(2.52)
- AM_INIT_AUTOMAKE(nano, 1.1.9)
--AM_CONFIG_HEADER(config.h:config.h.in)
--AM_ACLOCAL_INCLUDE(m4)
--ALL_LINGUAS="es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb"
-+AM_CONFIG_HEADER(config.h)
+--- nano-1.1.10/Makefile.am.orig	Mon Jun  3 14:32:28 2002
++++ nano-1.1.10/Makefile.am	Wed Aug  7 06:29:31 2002
+@@ -28,7 +28,7 @@
+ 		mkinstalldirs nano.1 nano.1.html faq.html nanorc.sample \
+ 		nano.spec
  
- dnl Checks for programs.
- AC_PROG_CC
-@@ -310,7 +308,8 @@
- fi
- 
- dnl i18n stuff - pretty incomplete for now
--NANO_AM_GNU_GETTEXT
-+ALL_LINGUAS="es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb"
-+AM_GNU_GETTEXT
- 
--AC_CONFIG_FILES([Makefile intl/Makefile m4/Makefile po/Makefile.in nano.spec])
-+AC_CONFIG_FILES([Makefile intl/Makefile po/Makefile.in nano.spec])
- AC_OUTPUT
---- nano-1.1.9/Makefile.am~	Mon May 13 08:07:47 2002
-+++ nano-1.1.9/Makefile.am	Mon May 13 08:07:47 2002
-@@ -27,7 +27,7 @@
- 		README THANKS TODO install-sh missing mkinstalldirs \
- 		nano.1 nano.1.html faq.html nanorc.sample nano.spec
- 
--SUBDIRS = po intl m4
+-SUBDIRS = po m4
 +SUBDIRS = po intl
  
  localedir = $(datadir)/locale
  INCLUDES = -Iintl -DLOCALEDIR=\"$(localedir)\" -I@includedir@
+--- nano-1.1.11/configure.ac.orig
++++ nano-1.1.11/configure.ac
+@@ -4,9 +4,7 @@
+ AC_CONFIG_SRCDIR([nano.c])
+ AC_PREREQ(2.52)
+ AM_INIT_AUTOMAKE(nano, 1.1.10)
+-AM_CONFIG_HEADER(config.h:config.h.in)
+-dnl AM_ACLOCAL_INCLUDE(m4)
+-ALL_LINGUAS="es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb ms"
++AM_CONFIG_HEADER(config.h)
+ 
+ dnl Checks for programs.
+ AC_PROG_CC
+@@ -316,7 +314,8 @@
+ fi
+ 
+ dnl i18n stuff - pretty incomplete for now
+-AM_GNU_GETTEXT([external])
++ALL_LINGUAS="es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb ms"
++AM_GNU_GETTEXT
+ 
+-AC_CONFIG_FILES([Makefile m4/Makefile po/Makefile.in nano.spec])
++AC_CONFIG_FILES([Makefile m4/Makefile intl/Makefile po/Makefile.in nano.spec])
+ AC_OUTPUT
