@@ -1,0 +1,22 @@
+--- nano-1.1.1/configure.in~	Sat Jul 28 00:11:24 2001
++++ nano-1.1.1/configure.in	Mon Jul 30 11:27:31 2001
+@@ -8,7 +8,7 @@
+ dnl Checks for programs.
+ AC_PROG_CC
+ AC_ISC_POSIX
+-NANO_AC_SYS_LARGEFILE
++AC_SYS_LARGEFILE
+ 
+ dnl Checks for header files.
+ AC_HEADER_STDC
+@@ -289,7 +289,8 @@
+ 	LDFLAGS="$LDFLAGS $glib_libs"
+ fi
+ 
+-dnl i18n stuff - pretty incomplete for now
+-NANO_AM_GNU_GETTEXT
++dnl i18n stuff - pretty
++ALL_LINGUAS="ca cs de es fi fr gl hu id it no ru sv uk"
++AM_GNU_GETTEXT
+ 
+ AC_OUTPUT([Makefile intl/Makefile po/Makefile.in])
