@@ -2,7 +2,7 @@ Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
 Version:	1.2.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.2/%{name}-%{version}.tar.gz
@@ -15,9 +15,9 @@ URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	glib-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	texinfo
-BuildRequires:	glib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
