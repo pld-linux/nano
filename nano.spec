@@ -22,7 +22,7 @@ offering a few enhancements.
 %setup -q
 
 %build
-CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -I/usr/include/ncurses"
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure
 %{__make}
 
