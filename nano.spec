@@ -1,6 +1,6 @@
 Summary:	nano (Nano's ANOther editor)
 Name:		nano
-Version:	0.9.6
+Version:	0.9.7
 Release:	1
 License:	GPL
 Group:		Applications/Editors
@@ -14,7 +14,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP Isn't
 Pico). It aims to emulate Pico as closely as possible while also offering a
-few enhancements.  %Prep
+few enhancements.
 
 %prep
 %setup -q
