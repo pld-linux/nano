@@ -1,15 +1,15 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	0.9.25
+Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
 Group(pt):	Aplicações/Editores
-Source0:	ftp://ftp.asty.org/pub/nano/%{name}-%{version}.tar.gz
-URL:		http://www.asty.org/nano/
+Source0:	http://www.nano-editor.org/dist/%{name}-%{version}.tar.gz
+URL:		http://www.nano-editor.org/
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
