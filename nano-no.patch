@@ -1,7 +1,0 @@
-diff -burN nano-1.2.2.orig/po/LINGUAS nano-1.2.2/po/LINGUAS
---- nano-1.2.2.orig/po/LINGUAS	2003-09-15 09:16:16.766047200 +0200
-+++ nano-1.2.2/po/LINGUAS	2003-09-15 09:17:14.806223752 +0200
-@@ -1,2 +1,2 @@
- # List of available languages.
--es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb ms pt_BR tr eu ro
-+es de fr it id fi hu ca cs gl uk ru sv nn nl da pl no ms pt_BR tr eu ro
