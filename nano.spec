@@ -2,7 +2,7 @@ Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
 Version:	1.1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Editors
 Group(de):	Applikationen/Editors
@@ -20,6 +20,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP
 Isn't Pico). It aims to emulate Pico as closely as possible while also
 offering a few enhancements.
+
+%description -l pl
+nano to edytor wcze¶niej znany jako TIP (Tip to nIe Pico). Jego celem
+jest emulowanie Pico tak dobrze jk to mo¿liwe, jednocze¶nie oferuj±c
+kilka rozszerzeñ.
 
 %prep
 %setup -q
