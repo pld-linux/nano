@@ -1,0 +1,14 @@
+--- nano-1.1.8/nano.texi~	Sun Apr  7 10:41:14 2002
++++ nano-1.1.8/nano.texi	Sun Apr  7 10:41:14 2002
+@@ -11,9 +11,9 @@
+ @set VERSION 1.1.8
+ @set UPDATED 4 Jan 2002
+ 
+-@dircategory Editors
++@dircategory Editors:
+ @direntry
+-* Nano: (nano).                 Small and friendly text editor.
++* Nano: (nano).				Small and friendly text editor
+ @end direntry
+ 
+ @c tex
