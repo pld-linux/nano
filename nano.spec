@@ -1,43 +1,47 @@
-Summary: nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP Isn't Pico). It aims to emulate Pico as closely as possible while also offering a few enhancements.
-Name: nano
-Version: 0.8.9
-Release: 1
-Group: Console/Editors
-Copyright: GPL
-Packager: chrisa@asty.org
-URL: http://www.asty.org/nano/
-Source0: http://www.asty.org/nano/dist/nano-0.8.9.tar.gz
-#Provides: none
-Requires: ncurses
-#Conflicts: none
-BuildRoot: /tmp/nano-0.8.9
-%Description
-nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP Isn't 
-Pico). It aims to emulate Pico as closely as possible while also offering a few enhancements.
-%Prep
-%setup
-%Build
-./configure --prefix=/usr
+Summary:	nano (Nano's ANOther editor)
+Name:		nano
+Version:	0.8.9
+Release:	1
+License:	GPL
+Group:		Applications/Editors
+Group(pl):	Aplikacje/Edytory
+Source0:	http://www.asty.org/nano/dist/%{name}-%{version}.tar.gz
+URL:		http://www.asty.org/nano/
+BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	gettext-devel
+BuildRoot:	/tmp/%{name}-%{version}-root
+
+%description
+nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP Isn't
+Pico). It aims to emulate Pico as closely as possible while also offering a
+few enhancements.  %Prep
+
+%prep
+%setup -q
+
+%build
+gettextize --copy --force
+LDFLAGS="-s"
+CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"
+export LDFLAGS CFLAGS
+%configure
 make
-%Install
+
+%install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/usr/bin
-mkdir -p $RPM_BUILD_ROOT/usr/man/man1/
-strip nano
-install nano $RPM_BUILD_ROOT/usr/bin
-install nano.1 $RPM_BUILD_ROOT/usr/man/man1
+
+make install DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	README ChangeLog AUTHORS NEWS TODO
+
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
-%files
-%defattr(-,root,root)
-/usr/bin/nano
-/usr/man/man1/nano.1
-%doc README COPYING ChangeLog AUTHORS BUGS INSTALL NEWS TODO nano.1.html
-%doc COPYING
-%doc ChangeLog
-%doc AUTHORS
-%doc BUGS
-%doc INSTALL
-%doc NEWS
-%doc TODO
-%doc nano.1.html
+
+%files -f %{name}.lang
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_bindir}/nano
+%{_mandir}/man1/*
