@@ -34,4 +34,5 @@ Icon=nano.png
 Exec=nano
 Terminal=1
 Type=Application 
+Encoding=UTF-8
 # vi: encoding=utf-8
