@@ -1,6 +1,6 @@
 Summary:	nano (Nano's ANOther editor)
 Name:		nano
-Version:	0.9.8
+Version:	0.9.9
 Release:	1
 License:	GPL
 Group:		Applications/Editors
