@@ -1,0 +1,34 @@
+--- nano-1.2.1/configure.ac~	Wed May 28 13:52:26 2003
++++ nano-1.2.1/configure.ac	Wed May 28 13:52:39 2003
+@@ -31,8 +31,7 @@
+ AC_ISC_POSIX
+ AC_SYS_LARGEFILE
+ 
+-dnl Internationalization macros.
+-AM_GNU_GETTEXT_VERSION(0.11.5)
++ALL_LINGUAS=`grep -v '^#' po/LINGUAS`
+ AM_GNU_GETTEXT([external], [need-ngettext])
+ 
+ dnl Checks for header files.
+#--- nano-1.2.1/Makefile.in~	Wed May 28 21:32:12 2003
+#+++ nano-1.2.1/Makefile.in	Wed May 28 21:32:12 2003
+#@@ -121,7 +121,7 @@
+# 
+# 
+# man_MANS = nano.1 nanorc.5
+#-nano_LDADD = @GLIB_LIBS@ @LIBINTL@
+#+nano_LDADD = @GLIB_LIBS@ @INTLLIBS@
+# 
+# info_TEXINFOS = nano.texi
+# MAKEINFO = makeinfo --no-split
+--- nano-1.2.1/Makefile.am~	Wed May 28 21:35:02 2003
++++ nano-1.2.1/Makefile.am	Wed May 28 21:35:02 2003
+@@ -18,7 +18,7 @@
+ 		winio.c 
+ 
+ man_MANS = nano.1 nanorc.5
+-nano_LDADD = @GLIB_LIBS@ @LIBINTL@
++nano_LDADD = @GLIB_LIBS@ @INTLLIBS@
+ 
+ info_TEXINFOS = nano.texi
+ MAKEINFO = makeinfo --no-split
