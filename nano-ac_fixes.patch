@@ -1,9 +1,9 @@
---- nano-1.1.8/configure.ac~	Sat Mar 30 17:35:08 2002
-+++ nano-1.1.8/configure.ac	Sun Apr  7 04:45:36 2002
+--- nano-1.1.9/configure.ac.orig	Mon May 13 02:09:30 2002
++++ nano-1.1.9/configure.ac	Mon May 13 08:05:15 2002
 @@ -4,9 +4,7 @@
  AC_CONFIG_SRCDIR([nano.c])
  AC_PREREQ(2.52)
- AM_INIT_AUTOMAKE(nano, 1.1.8)
+ AM_INIT_AUTOMAKE(nano, 1.1.9)
 -AM_CONFIG_HEADER(config.h:config.h.in)
 -AM_ACLOCAL_INCLUDE(m4)
 -ALL_LINGUAS="es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb"
@@ -11,7 +11,7 @@
  
  dnl Checks for programs.
  AC_PROG_CC
-@@ -307,7 +305,8 @@
+@@ -310,7 +308,8 @@
  fi
  
  dnl i18n stuff - pretty incomplete for now
@@ -22,8 +22,8 @@
 -AC_CONFIG_FILES([Makefile intl/Makefile m4/Makefile po/Makefile.in nano.spec])
 +AC_CONFIG_FILES([Makefile intl/Makefile po/Makefile.in nano.spec])
  AC_OUTPUT
---- nano-1.1.8/Makefile.am~	Sun Apr  7 09:50:59 2002
-+++ nano-1.1.8/Makefile.am	Sun Apr  7 09:50:59 2002
+--- nano-1.1.9/Makefile.am~	Mon May 13 08:07:47 2002
++++ nano-1.1.9/Makefile.am	Mon May 13 08:07:47 2002
 @@ -27,7 +27,7 @@
  		README THANKS TODO install-sh missing mkinstalldirs \
  		nano.1 nano.1.html faq.html nanorc.sample nano.spec
