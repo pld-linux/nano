@@ -1,7 +1,7 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.1.8
+Version:	1.1.9
 Release:	1
 License:	GPL
 Group:		Applications/Editors
