@@ -1,6 +1,6 @@
 Summary:	nano (Nano's ANOther editor)
 Name:		nano
-Version:	0.9.18
+Version:	0.9.19
 Release:	1
 License:	GPL
 Group:		Applications/Editors
@@ -32,8 +32,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README ChangeLog AUTHORS NEWS TODO \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf README ChangeLog AUTHORS NEWS TODO
 
 %find_lang %{name}
 
