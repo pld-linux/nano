@@ -1,7 +1,7 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
 License:	GPL
 Group:		Applications/Editors
@@ -9,7 +9,10 @@ Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
 Group(pt):	Aplicações/Editores
 Source0:	http://www.nano-editor.org/dist/v1.1/%{name}-%{version}.tar.gz
+Patch0:		%{name}-ac_fixes.patch
 URL:		http://www.nano-editor.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	ncurses-devel >= 5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -20,10 +23,13 @@ offering a few enhancements.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+aclocal
 autoconf
+automake -a -c
+CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure
 %{__make}
 
