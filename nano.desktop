@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Nono
+Name=Nano
 Comment=Nano text editor
 Comment[bg]=Nano текстов редактор
 Comment[ca]=L'editor de text Nano
@@ -30,8 +30,8 @@ Comment[uk]=Текстовий редактор
 Comment[wa]=L' aspougneu di tekse Nano
 Comment[zh_CN]=Nano 文字编缉器
 Comment[zh_TW]=Nano 文字編緝器
-Icon=
-Exec=nano.png
+Icon=nano.png
+Exec=nano
 Terminal=1
 Type=Application 
 # vi: encoding=utf-8
