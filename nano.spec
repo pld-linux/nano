@@ -9,7 +9,7 @@ Source0:	http://www.asty.org/nano/dist/%{name}-%{version}.tar.gz
 URL:		http://www.asty.org/nano/
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	gettext-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP Isn't
