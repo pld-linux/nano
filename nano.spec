@@ -1,16 +1,18 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.1.6
+Version:	1.1.8
 Release:	1
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.1/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_fixes.patch
+Patch1:		%{name}-info.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,6 +28,7 @@ kilka rozszerzeñ.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing m4/*
@@ -48,8 +51,15 @@ gzip -9nf README ChangeLog AUTHORS NEWS TODO
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+
+%postun
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/nano
 %{_mandir}/man1/*
+%{_infodir}/*info*
