@@ -1,16 +1,15 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.1.12
-Release:	2
+Version:	1.2.1
+Release:	3
 License:	GPL
 Group:		Applications/Editors
-Source0:	http://www.nano-editor.org/dist/v1.1/%{name}-%{version}.tar.gz
+Source0:	http://www.nano-editor.org/dist/v1.2/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-ac_fixes.patch
-Patch2:		%{name}-am_fixes.patch
+Patch1:		%{name}-ncurses-ncurses.h.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,22 +25,21 @@ offering a few enhancements.
 
 %description -l pl
 nano to edytor wcze¶niej znany jako TIP (Tip to nIe Pico). Jego celem
-jest emulowanie Pico tak dobrze jk to mo¿liwe, jednocze¶nie oferuj±c
+jest emulowanie Pico tak dobrze jak to mo¿liwe, jednocze¶nie oferuj±c
 kilka rozszerzeñ.
 
 %prep
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 rm -f missing m4/*.m4
 %{__gettextize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
-CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure
 %{__make}
 
@@ -70,6 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README ChangeLog AUTHORS NEWS TODO
 %attr(755,root,root) %{_bindir}/nano
 %{_applnkdir}/Editors/nano.desktop
-%{_mandir}/man1/*
+%{_mandir}/man[15]/*
 %{_infodir}/*info*
 %{_pixmapsdir}/*
