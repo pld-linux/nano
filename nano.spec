@@ -1,11 +1,12 @@
 Summary:	nano (Nano's ANOther editor)
 Name:		nano
-Version:	0.9.17
+Version:	0.9.18
 Release:	1
 License:	GPL
 Group:		Applications/Editors
-Group(pt):	X11/Aplicações/Editores
+Group(de):	Applikationen/Editors
 Group(pl):	Aplikacje/Edytory
+Group(pt):	Aplicações/Editores
 Source0:	ftp://ftp.asty.org/pub/nano/%{name}-%{version}.tar.gz
 URL:		http://www.asty.org/nano/
 BuildRequires:	ncurses-devel >= 5.0
@@ -22,7 +23,7 @@ offering a few enhancements.
 
 %build
 gettextize --copy --force
-CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"; export CFLAGS
+CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"
 %configure
 %{__make}
 
@@ -31,8 +32,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README ChangeLog AUTHORS NEWS TODO
+gzip -9nf README ChangeLog AUTHORS NEWS TODO \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %find_lang %{name}
 
