@@ -1,9 +1,10 @@
 Summary:	nano (Nano's ANOther editor)
 Name:		nano
-Version:	0.9.7
+Version:	0.9.8
 Release:	1
 License:	GPL
 Group:		Applications/Editors
+Group(pt):	X11/Aplicações/Editores
 Group(pl):	Aplikacje/Edytory
 Source0:	http://www.asty.org/nano/dist/%{name}-%{version}.tar.gz
 URL:		http://www.asty.org/nano/
@@ -12,9 +13,9 @@ BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP Isn't
-Pico). It aims to emulate Pico as closely as possible while also offering a
-few enhancements.
+nano (Nano's ANOther editor) is the editor formerly known as TIP (TIP
+Isn't Pico). It aims to emulate Pico as closely as possible while also
+offering a few enhancements.
 
 %prep
 %setup -q
