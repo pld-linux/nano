@@ -1,6 +1,6 @@
 Summary:	nano (Nano's ANOther editor)
 Name:		nano
-Version:	0.9.16
+Version:	0.9.17
 Release:	1
 License:	GPL
 Group:		Applications/Editors
@@ -22,9 +22,7 @@ offering a few enhancements.
 
 %build
 gettextize --copy --force
-LDFLAGS="-s"
-CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"
-export LDFLAGS CFLAGS
+CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"; export CFLAGS
 %configure
 %{__make}
 
