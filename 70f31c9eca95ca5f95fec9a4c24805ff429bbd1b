@@ -1,0 +1,2 @@
+- updated to 1.1.1,
+- added ac_fixes patch (use standard AM_GNU_GETTEXT and AC_SYS_LARGEFILE).
