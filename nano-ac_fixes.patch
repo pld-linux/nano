@@ -16,7 +16,7 @@
 -dnl i18n stuff - pretty incomplete for now
 -NANO_AM_GNU_GETTEXT
 +dnl i18n stuff - pretty
-+ALL_LINGUAS="ca cs de es fi fr gl hu id it no ru sv uk"
++ALL_LINGUAS="ca cs da de es fi fr gl hu id it nb nl nn pl ru sv uk"
 +AM_GNU_GETTEXT
  
  AC_OUTPUT([Makefile intl/Makefile po/Makefile.in])
