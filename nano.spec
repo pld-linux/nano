@@ -1,14 +1,16 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.1.10
-Release:	3
+Version:	1.1.12
+Release:	1
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.1/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-Patch0:		%{name}-ac_fixes.patch
-Patch1:		%{name}-info.patch
+Source2:	%{name}.png
+Patch0:		%{name}-info.patch
+Patch1:		%{name}-ac_fixes.patch
+Patch2:		%{name}-am_fixes.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,6 +33,7 @@ kilka rozszerzeñ.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing m4/*.m4
@@ -44,11 +47,12 @@ CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities/Editors
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Utilities/Editors,%{_pixmapsdir}}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/Editors
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name}
 
@@ -65,6 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog AUTHORS NEWS TODO
 %attr(755,root,root) %{_bindir}/nano
-%{_applnkdir}/Utilities/Editors/nano.desktop
 %{_mandir}/man1/*
 %{_infodir}/*info*
+%{_applnkdir}/Utilities/Editors/nano.desktop
+%{_pixmapsdir}/*
