@@ -2,13 +2,14 @@ Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
 Version:	1.2.1
-Release:	1
+Release:	3
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.2/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
+Patch1:		%{name}-ncurses-ncurses.h.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,14 +31,15 @@ kilka rozszerzeñ.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing m4/*.m4
 %{__gettextize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
-CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 %configure
 %{__make}
 
