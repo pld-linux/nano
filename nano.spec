@@ -34,7 +34,6 @@ kilka rozszerzeñ.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 rm -f missing m4/*.m4
