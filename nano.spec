@@ -26,7 +26,7 @@ LDFLAGS="-s"
 CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses"
 export LDFLAGS CFLAGS
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
