@@ -35,4 +35,5 @@ Exec=nano
 Terminal=true
 Type=Application 
 Encoding=UTF-8
+Categories=Application;Utility;TextEditor;
 # vi: encoding=utf-8
