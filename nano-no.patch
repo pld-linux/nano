@@ -1,0 +1,6 @@
+--- nano-1.2.1/po/LINGUAS~	Tue Sep  9 00:36:26 2003
++++ nano-1.2.1/po/LINGUAS	Tue Sep  9 00:36:26 2003
+@@ -1,2 +1,2 @@
+ # List of available languages.
+-es de fr it id fi hu ca cs gl uk ru sv nn nl da pl nb ms pt_BR tr eu
++es de fr it id fi hu ca cs gl uk ru sv nn nl da pl no ms pt_BR tr eu
