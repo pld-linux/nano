@@ -1,16 +1,14 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.1.12
-Release:	3
+Version:	1.2.1
+Release:	1
 License:	GPL
 Group:		Applications/Editors
-Source0:	http://www.nano-editor.org/dist/v1.1/%{name}-%{version}.tar.gz
+Source0:	http://www.nano-editor.org/dist/v1.2/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-ac_fixes.patch
-Patch2:		%{name}-am_fixes.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,8 +30,6 @@ kilka rozszerzeñ.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 rm -f missing m4/*.m4
@@ -70,6 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README ChangeLog AUTHORS NEWS TODO
 %attr(755,root,root) %{_bindir}/nano
 %{_applnkdir}/Editors/nano.desktop
-%{_mandir}/man1/*
+%{_mandir}/man[15]/*
 %{_infodir}/*info*
 %{_pixmapsdir}/*
