@@ -2,10 +2,11 @@ Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
 Version:	1.1.10
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.1/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
 Patch0:		%{name}-ac_fixes.patch
 Patch1:		%{name}-info.patch
 URL:		http://www.nano-editor.org/
@@ -43,8 +44,11 @@ CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities/Editors
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/Editors
 
 %find_lang %{name}
 
@@ -61,5 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog AUTHORS NEWS TODO
 %attr(755,root,root) %{_bindir}/nano
+%{_applnkdir}/Utilities/Editors/nano.desktop
 %{_mandir}/man1/*
 %{_infodir}/*info*
