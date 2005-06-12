@@ -1,12 +1,12 @@
 Summary:	nano (Nano's ANOther editor)
 Summary(pl):	nano - jeszcze jeden edytor
 Name:		nano
-Version:	1.2.4
-Release:	3
-License:	GPL
+Version:	1.2.5
+Release:	1
+License:	GPL v2
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.2/%{name}-%{version}.tar.gz
-# Source0-md5:	2c513310ec5e8b63abaecaf48670ac7a
+# Source0-md5:	f2b3efbf1cf356d736740d531b6b22c4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
