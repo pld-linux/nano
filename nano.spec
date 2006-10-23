@@ -77,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/nano
 %{_desktopdir}/nano.desktop
 %{_mandir}/man[15]/*
+%lang(fr) %{_mandir}/fr/man[15]/*
 %{_infodir}/*info*
 %{_pixmapsdir}/*
-%{_datadir}/nano/*
-%lang(fr) %{_mandir}/fr/man[15]/*
+%{_datadir}/nano
