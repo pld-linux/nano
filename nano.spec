@@ -1,4 +1,4 @@
-%define _pre	pre2
+%define _pre	pre3
 Summary:	nano - Nano's ANOther editor, an enhanced free Pico clone
 Summary(pl):	nano - jeszcze jeden edytor, darmowy, rozbudowany klon Pico
 Name:		nano
@@ -7,7 +7,7 @@ Release:	0.%{_pre}.1
 License:	GPL v2
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v1.3/%{name}-%{version}%{_pre}.tar.gz
-# Source0-md5:	60d487b171ced6e6df0a0ee376ddf6ab
+# Source0-md5:	66029c65d23f7e8f721412b1dd28744c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
