@@ -33,7 +33,7 @@ nano to ma³y, otwarty i przyjazny edytor, którego celem jest zast±pienie
 Pico, standardowego edytora zawartego w niewolnym pakiecie Pine.
 Oprócz wygl±du oraz interfejsu, nano posiada kilka brakuj±cych (lub
 wy³±czonych standardowo) w Pico funkcji, takich jak: "znajd¼ i zast±p"
-lub "id¼ do linii numer".
+lub "id¼ do wiersza numer".
 
 %prep
 %setup -q -n %{name}-%{version}%{_pre}
