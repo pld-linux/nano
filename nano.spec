@@ -1,13 +1,12 @@
-%define _pre	pre3
 Summary:	nano - Nano's ANOther editor, an enhanced free Pico clone
 Summary(pl):	nano - jeszcze jeden edytor, darmowy, rozbudowany klon Pico
 Name:		nano
-Version:	1.9.99
-Release:	0.%{_pre}.1
+Version:	2.0.0
+Release:	0.1
 License:	GPL v2
 Group:		Applications/Editors
-Source0:	http://www.nano-editor.org/dist/v1.3/%{name}-%{version}%{_pre}.tar.gz
-# Source0-md5:	66029c65d23f7e8f721412b1dd28744c
+Source0:	http://www.nano-editor.org/dist/v2.0/%{name}-%{version}.tar.gz
+# Source0-md5:	d1a8ac92b1985217f405a4c54562d8f3
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
@@ -36,7 +35,7 @@ wy³±czonych standardowo) w Pico funkcji, takich jak: "znajd¼ i zast±p"
 lub "id¼ do wiersza numer".
 
 %prep
-%setup -q -n %{name}-%{version}%{_pre}
+%setup -q
 %patch0 -p1
 %patch1 -p2
 
