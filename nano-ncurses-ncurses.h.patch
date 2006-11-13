@@ -1,22 +1,24 @@
---- nano-1.2.1/nano.h~	Sun May 11 16:35:14 2003
-+++ nano-1.2.1/nano.h	Sun May 11 16:35:14 2003
-@@ -50,6 +50,8 @@
+--- nano-1.3.11/src/nano.h	2006-03-30 03:18:29.000000000 +0200
++++ nano-1.3.11/src/nano.h-new	2006-11-13 23:29:04.742696728 +0100
+@@ -71,8 +71,8 @@
  #define KEY_DC SL_KEY_DELETE
- #elif defined(HAVE_NCURSES_H)
- #include <ncurses.h>
+ #define KEY_IC SL_KEY_IC
+ /* Ncurses support. */
+-#elif defined(HAVE_NCURSES_H)
+-#include <ncurses.h>
 +#elif defined(HAVE_NCURSES_NCURSES_H)
 +#include <ncurses/ncurses.h>
- #else /* Uh oh */
- #include <curses.h> 
- #endif /* CURSES_H */
---- nano-1.2.1/configure.ac~	Sun May 11 16:36:24 2003
-+++ nano-1.2.1/configure.ac	Sun May 11 16:36:24 2003
-@@ -295,7 +295,7 @@
+ #else
+ /* Curses support. */
+ #include <curses.h>
+--- nano-1.3.11/configure.ac	2006-11-13 23:34:50.167184224 +0100
++++ nano-1.3.11/configure.ac-new	2006-11-13 23:35:02.974237256 +0100
+@@ -425,7 +425,7 @@
+ dnl Checks for libraries.
  
- if eval "test x$CURSES_LIB_NAME = x"
- then
--    AC_CHECK_HEADERS(curses.h ncurses.h)
-+    AC_CHECK_HEADERS(curses.h ncurses.h ncurses/ncurses.h)
-     AC_CHECK_LIB(ncurses, tgetent, [CURSES_LIB="-lncurses" CURSES_LIB_NAME=ncurses])
- fi
+ if eval "test x$CURSES_LIB_NAME = x"; then
+-    AC_CHECK_HEADERS(ncurses.h)
++    AC_CHECK_HEADERS(ncurses.h ncurses/ncurses.h)
  
+     if test x$enable_utf8 != xno; then
+ 	AC_CHECK_LIB(ncursesw, get_wch, [CURSES_LIB="-lncursesw" CURSES_LIB_NAME=ncursesw CURSES_LIB_WIDE=yes])
