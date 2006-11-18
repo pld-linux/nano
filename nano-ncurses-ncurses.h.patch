@@ -1,19 +1,17 @@
---- nano-1.3.11/src/nano.h	2006-03-30 03:18:29.000000000 +0200
-+++ nano-1.3.11/src/nano.h-new	2006-11-13 23:29:04.742696728 +0100
-@@ -71,8 +71,8 @@
- #define KEY_DC SL_KEY_DELETE
- #define KEY_IC SL_KEY_IC
+--- ./nano-1.9.99pre2/src/nano.h.orig	2006-08-22 20:48:13.000000000 +0200
++++ ./nano-1.9.99pre2/src/nano.h	2006-09-14 00:10:39.000000000 +0200
+@@ -71,6 +71,8 @@
  /* Ncurses support. */
--#elif defined(HAVE_NCURSES_H)
--#include <ncurses.h>
+ #elif defined(HAVE_NCURSES_H)
+ #include <ncurses.h>
 +#elif defined(HAVE_NCURSES_NCURSES_H)
 +#include <ncurses/ncurses.h>
  #else
  /* Curses support. */
  #include <curses.h>
---- nano-1.3.11/configure.ac	2006-11-13 23:34:50.167184224 +0100
-+++ nano-1.3.11/configure.ac-new	2006-11-13 23:35:02.974237256 +0100
-@@ -425,7 +425,7 @@
+--- ./nano-1.9.99pre2/configure.ac.orig	2006-08-29 19:29:57.000000000 +0200
++++ ./nano-1.9.99pre2/configure.ac	2006-09-14 00:10:31.000000000 +0200
+@@ -400,7 +400,7 @@
  dnl Checks for libraries.
  
  if eval "test x$CURSES_LIB_NAME = x"; then
