@@ -28,11 +28,11 @@ nano also implements some missing (or disabled by default) features in
 Pico, such as "search and replace" and "go to line number".
 
 %description -l pl
-nano to ma³y, otwarty i przyjazny edytor, którego celem jest zast±pienie
-Pico, standardowego edytora zawartego w niewolnym pakiecie Pine.
-Oprócz wygl±du oraz interfejsu, nano posiada kilka brakuj±cych (lub
-wy³±czonych standardowo) w Pico funkcji, takich jak: "znajd¼ i zast±p"
-lub "id¼ do wiersza numer".
+nano to ma³y, otwarty i przyjazny edytor, którego celem jest
+zast±pienie Pico, standardowego edytora zawartego w niewolnym pakiecie
+Pine. Oprócz wygl±du oraz interfejsu, nano posiada kilka brakuj±cych
+(lub wy³±czonych standardowo) w Pico funkcji, takich jak: "znajd¼ i
+zast±p" lub "id¼ do wiersza numer".
 
 %prep
 %setup -q
@@ -60,6 +60,8 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name}
+
+rm -f $RPM_BUILD_ROOT%{_infodir}/dir
 
 %clean
 rm -rf $RPM_BUILD_ROOT
