@@ -1,5 +1,5 @@
 Summary:	nano - Nano's ANOther editor, an enhanced free Pico clone
-Summary(pl):	nano - jeszcze jeden edytor, darmowy, rozbudowany klon Pico
+Summary(pl.UTF-8):   nano - jeszcze jeden edytor, darmowy, rozbudowany klon Pico
 Name:		nano
 Version:	2.0.0
 Release:	0.1
@@ -27,12 +27,12 @@ non-free Pine package. Rather than just copying Pico's look and feel,
 nano also implements some missing (or disabled by default) features in
 Pico, such as "search and replace" and "go to line number".
 
-%description -l pl
-nano to ma³y, otwarty i przyjazny edytor, którego celem jest zast±pienie
+%description -l pl.UTF-8
+nano to maÅ‚y, otwarty i przyjazny edytor, ktÃ³rego celem jest zastÄ…pienie
 Pico, standardowego edytora zawartego w niewolnym pakiecie Pine.
-Oprócz wygl±du oraz interfejsu, nano posiada kilka brakuj±cych (lub
-wy³±czonych standardowo) w Pico funkcji, takich jak: "znajd¼ i zast±p"
-lub "id¼ do wiersza numer".
+OprÃ³cz wyglÄ…du oraz interfejsu, nano posiada kilka brakujÄ…cych (lub
+wyÅ‚Ä…czonych standardowo) w Pico funkcji, takich jak: "znajdÅº i zastÄ…p"
+lub "idÅº do wiersza numer".
 
 %prep
 %setup -q
