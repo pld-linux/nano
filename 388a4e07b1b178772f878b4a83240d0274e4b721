@@ -1,0 +1,3 @@
+- bump release to 3 for allow upgrade from RH,
+- added ncurses-ncurses.h patch - now ins't neccessary passing
+  -I/usr/include/ncurses to autoconf environment (patch posted to maintainer).
