@@ -33,6 +33,6 @@ Comment[zh_TW]=Nano 文字編緝器
 Icon=nano
 Exec=nano
 Terminal=true
-Type=Application 
+Type=Application
 Categories=TextEditor;
 # vi: encoding=utf-8
