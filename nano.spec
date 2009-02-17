@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	nano - jeszcze jeden edytor, darmowy, rozbudowany klon Pico
 Name:		nano
 Version:	2.1.9
 Release:	1
-License:	GPL v2
+License:	GPL v3+
 Group:		Applications/Editors
 Source0:	http://www.nano-editor.org/dist/v2.1/%{name}-%{version}.tar.gz
 # Source0-md5:	41e9ffb4a055eba666cdb17c4e50ba21
@@ -81,5 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man[15]/*
 %lang(fr) %{_mandir}/fr/man[15]/*
 %{_infodir}/*info*
-%{_pixmapsdir}/*
+%{_pixmapsdir}/nano.png
 %{_datadir}/nano
