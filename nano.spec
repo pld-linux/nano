@@ -64,8 +64,6 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name}
 
-%{__rm} $RPM_BUILD_ROOT%{_infodir}/dir
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
