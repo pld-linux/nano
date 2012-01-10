@@ -11,7 +11,6 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-ncurses-ncurses.h.patch
-Patch2:		%{name}-link.patch
 URL:		http://www.nano-editor.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -40,7 +39,6 @@ zastąp" lub "idź do wiersza numer".
 %setup -q
 %patch0 -p1
 %patch1 -p2
-%patch2 -p1
 
 %build
 %{__gettextize}
