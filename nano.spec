@@ -1,39 +1,41 @@
-Summary:	nano - Nano's ANOther editor, an enhanced free Pico clone
-Summary(pl.UTF-8):	nano - jeszcze jeden edytor, darmowy, rozbudowany klon Pico
+Summary:	GNU nano - Nano's ANOther editor, an enhanced free Pico clone
+Summary(pl.UTF-8):	GNU nano - jeszcze jeden edytor: darmowy, rozbudowany klon Pico
 Name:		nano
-Version:	2.2.6
-Release:	5
+Version:	2.7.4
+Release:	1
 License:	GPL v3+
 Group:		Applications/Editors
-Source0:	http://www.nano-editor.org/dist/v2.2/%{name}-%{version}.tar.gz
-# Source0-md5:	03233ae480689a008eb98feb1b599807
+Source0:	https://www.nano-editor.org/dist/v2.7/%{name}-%{version}.tar.gz
+# Source0-md5:	e3a6b2740eb31f8a06d585f44d883895
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-ncurses-ncurses.h.patch
 URL:		http://www.nano-editor.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
-BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel
+BuildRequires:	gettext-tools >= 0.11.5
 BuildRequires:	groff
+BuildRequires:	libmagic-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	texinfo
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-nano (Nano's ANOther editor) is a small, free and friendly editor
+GNU nano (Nano's ANOther editor) is a small, free and friendly editor
 which aims to replace Pico, the default editor included in the
 non-free Pine package. Rather than just copying Pico's look and feel,
 nano also implements some missing (or disabled by default) features in
 Pico, such as "search and replace" and "go to line number".
 
 %description -l pl.UTF-8
-nano to mały, otwarty i przyjazny edytor, którego celem jest
-zastąpienie Pico, standardowego edytora zawartego w niewolnym pakiecie
-Pine. Oprócz wyglądu oraz interfejsu, nano posiada kilka brakujących
-(lub wyłączonych standardowo) w Pico funkcji, takich jak: "znajdź i
-zastąp" lub "idź do wiersza numer".
+GNU nano (Nano's ANOther editor - Nano to kolejny edytor) to mały,
+otwarty i przyjazny edytor, którego celem jest zastąpienie Pico,
+standardowego edytora zawartego w niewolnym pakiecie Pine. Oprócz
+wyglądu oraz interfejsu, nano posiada kilka brakujących (lub
+wyłączonych standardowo) w Pico funkcji, takich jak: "znajdź i zastąp"
+lub "idź do wiersza numer".
 
 %prep
 %setup -q
@@ -46,8 +48,8 @@ zastąp" lub "idź do wiersza numer".
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure \
-	--enable-all
+%configure
+
 %{__make}
 
 %install
@@ -65,20 +67,21 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS BUGS ChangeLog NEWS README THANKS TODO UPGRADE doc/nanorc.sample doc/faq.html
+%doc AUTHORS ChangeLog IMPROVEMENTS NEWS README THANKS TODO doc/{faq.html,sample.nanorc}
 %attr(755,root,root) %{_bindir}/nano
 %attr(755,root,root) %{_bindir}/rnano
-%{_desktopdir}/nano.desktop
-%{_mandir}/man[15]/*
-%lang(fr) %{_mandir}/fr/man[15]/*
-%{_infodir}/*info*
-%{_pixmapsdir}/nano.png
 %{_datadir}/nano
+%{_desktopdir}/nano.desktop
+%{_pixmapsdir}/nano.png
+%{_mandir}/man1/nano.1*
+%{_mandir}/man1/rnano.1*
+%{_mandir}/man5/nanorc.5*
+%{_infodir}/nano.info*

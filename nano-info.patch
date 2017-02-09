@@ -1,8 +1,8 @@
---- nano-1.9.99pre2/doc/texinfo/nano.texi.orig	Fri Jul 31 01:41:31 2006
-+++ nano-1.9.99pre2/doc/texinfo/nano.texi	Wed Sep 10 02:34:34 2006
-@@ -11,9 +11,9 @@
- @set VERSION 1.9.99pre1
- @set UPDATED 30 Jul 2006
+--- nano-2.7.4/doc/nano.texi.orig	2017-01-10 11:31:53.000000000 +0100
++++ nano-2.7.4/doc/nano.texi	2017-02-09 18:41:40.616295727 +0100
+@@ -9,9 +9,9 @@
+ @set VERSION 2.7.4
+ @set UPDATED January 2017
  
 -@dircategory Editors
 +@dircategory Editors:
@@ -12,14 +12,14 @@
  @end direntry
  
  @c tex
-@@ -31,8 +31,8 @@
- This manual documents GNU @code{nano}, a small and friendly text
- editor.
+@@ -28,8 +28,8 @@
+ 
+ This manual documents GNU @code{nano}, a small and friendly text editor.
  
 -This manual is part of the GNU @code{nano} distribution.@*
--@sp4
+-@sp 4
 +This manual is part of the GNU @code{nano} distribution.
 +
  Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
- 2008, 2009 Free Software Foundation, Inc.
+ 2009, 2014, 2015 Free Software Foundation, Inc.
  
