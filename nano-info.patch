@@ -1,8 +1,8 @@
---- nano-2.7.4/doc/nano.texi.orig	2017-01-10 11:31:53.000000000 +0100
-+++ nano-2.7.4/doc/nano.texi	2017-02-09 18:41:40.616295727 +0100
+--- nano-2.8.4/doc/nano.texi.orig	2017-05-21 10:37:58.000000000 +0200
++++ nano-2.8.4/doc/nano.texi	2017-06-08 20:42:44.616369715 +0200
 @@ -9,9 +9,9 @@
- @set VERSION 2.7.4
- @set UPDATED January 2017
+ @set VERSION 2.8.4
+ @set UPDATED May 2017
  
 -@dircategory Editors
 +@dircategory Editors:
@@ -20,6 +20,6 @@
 -@sp 4
 +This manual is part of the GNU @code{nano} distribution.
 +
- Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
- 2009, 2014, 2015 Free Software Foundation, Inc.
+ Copyright (C) 1999-2009, 2014-2017 Free Software Foundation, Inc.
  
+ This document is dual-licensed.  You may distribute and/or modify it

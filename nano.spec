@@ -1,24 +1,27 @@
 Summary:	GNU nano - Nano's ANOther editor, an enhanced free Pico clone
 Summary(pl.UTF-8):	GNU nano - jeszcze jeden edytor: darmowy, rozbudowany klon Pico
 Name:		nano
-Version:	2.7.5
+Version:	2.8.4
 Release:	1
 License:	GPL v3+
 Group:		Applications/Editors
-Source0:	https://www.nano-editor.org/dist/v2.7/%{name}-%{version}.tar.gz
-# Source0-md5:	c77891d5c7aa7cb47c48010fe3bf8597
+Source0:	https://www.nano-editor.org/dist/v2.8/%{name}-%{version}.tar.xz
+# Source0-md5:	02ff28870194178595b287fc16fa611b
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-ncurses-ncurses.h.patch
 URL:		http://www.nano-editor.org/
-BuildRequires:	autoconf >= 2.61
-BuildRequires:	automake
-BuildRequires:	gettext-tools >= 0.11.5
+BuildRequires:	autoconf >= 2.69
+BuildRequires:	automake >= 1:1.14
+BuildRequires:	gettext-tools >= 0.18.3
 BuildRequires:	groff
 BuildRequires:	libmagic-devel
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo
+BuildRequires:	xz
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
