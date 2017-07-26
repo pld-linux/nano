@@ -1,12 +1,12 @@
 Summary:	GNU nano - Nano's ANOther editor, an enhanced free Pico clone
 Summary(pl.UTF-8):	GNU nano - jeszcze jeden edytor: darmowy, rozbudowany klon Pico
 Name:		nano
-Version:	2.8.4
+Version:	2.8.6
 Release:	1
 License:	GPL v3+
 Group:		Applications/Editors
 Source0:	https://www.nano-editor.org/dist/v2.8/%{name}-%{version}.tar.xz
-# Source0-md5:	02ff28870194178595b287fc16fa611b
+# Source0-md5:	66e3ca6b718d3cac7ba6c4410a198aab
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-info.patch
