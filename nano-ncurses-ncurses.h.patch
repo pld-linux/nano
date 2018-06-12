@@ -1,5 +1,5 @@
---- ./nano-1.9.99pre2/src/nano.h.orig	2006-08-22 20:48:13.000000000 +0200
-+++ ./nano-1.9.99pre2/src/nano.h	2006-09-14 00:10:39.000000000 +0200
+--- nano-1.9.99pre2/src/nano.h.orig	2006-08-22 20:48:13.000000000 +0200
++++ nano-1.9.99pre2/src/nano.h	2006-09-14 00:10:39.000000000 +0200
 @@ -71,6 +71,8 @@
  /* Ncurses support. */
  #elif defined(HAVE_NCURSES_H)
@@ -9,14 +9,14 @@
  #else
  /* Curses support. */
  #include <curses.h>
---- ./nano-1.9.99pre2/configure.ac.orig	2006-08-29 19:29:57.000000000 +0200
-+++ ./nano-1.9.99pre2/configure.ac	2006-09-14 00:10:31.000000000 +0200
-@@ -400,7 +400,7 @@
- dnl Checks for libraries.
+--- nano-2.9.8/configure.ac.orig	2018-06-12 19:41:34.569620447 +0200
++++ nano-2.9.8/configure.ac	2018-06-12 19:47:56.142949422 +0200
+@@ -531,7 +531,7 @@
+ fi
  
  if eval "test x$CURSES_LIB_NAME = x"; then
--    AC_CHECK_HEADERS(ncurses.h)
-+    AC_CHECK_HEADERS(ncurses.h ncurses/ncurses.h)
+-	AC_CHECK_HEADERS(ncurses.h)
++	AC_CHECK_HEADERS(ncurses.h ncurses/ncurses.h)
  
-     if test x$enable_utf8 != xno; then
- 	AC_CHECK_LIB(ncursesw, get_wch, [CURSES_LIB="-lncursesw" CURSES_LIB_NAME=ncursesw CURSES_LIB_WIDE=yes])
+ 	if test "x$enable_utf8" != xno; then
+ 		OLDLIBS="$LIBS"
