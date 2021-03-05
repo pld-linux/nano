@@ -1,8 +1,8 @@
---- nano-2.8.6/doc/nano.texi.orig	2017-07-21 09:53:28.000000000 +0200
-+++ nano-2.8.6/doc/nano.texi	2017-07-26 20:56:55.156848314 +0200
+--- nano-5.6.1/doc/nano.texi.orig	2021-03-05 18:45:34.299060126 +0100
++++ nano-5.6.1/doc/nano.texi	2021-03-05 18:47:08.173890979 +0100
 @@ -11,9 +11,9 @@
- @set VERSION 2.8.6
- @set UPDATED July 2017
+ @set VERSION 5.6.1
+ @set UPDATED March 2021
  
 -@dircategory Editors
 +@dircategory Editors:
@@ -12,12 +12,3 @@
  @end direntry
  
  @c tex
-@@ -30,7 +30,7 @@
- 
- This manual documents the GNU @command{nano} editor.
- @sp 1
--This manual is part of the GNU @command{nano} distribution.@*
-+This manual is part of the GNU @command{nano} distribution.
- 
- @sp 4
- Copyright @copyright{} 1999-2009, 2014-2017 Free Software Foundation, Inc.
