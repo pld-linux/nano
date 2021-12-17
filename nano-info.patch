@@ -1,8 +1,8 @@
 --- nano-5.9/doc/nano.texi.orig	2021-11-27 22:32:03.406959006 +0100
 +++ nano-5.9/doc/nano.texi	2021-11-28 07:17:49.525115015 +0100
 @@ -11,9 +11,9 @@
- @set VERSION 5.9
- @set UPDATED October 2021
+ @set VERSION 6.0
+ @set UPDATED December 2021
  
 -@dircategory Editors
 +@dircategory Editors:
@@ -11,4 +11,4 @@
 +* nano: (nano).				Small and friendly text editor
  @end direntry
  
- @c tex
+ @comment Prevent the black square at the end of an overlong line.
