@@ -1,8 +1,8 @@
---- nano-6.3/doc/nano.texi.orig	2021-11-27 22:32:03.406959006 +0100
-+++ nano-6.3/doc/nano.texi	2021-11-28 07:17:49.525115015 +0100
+--- nano-7.0/doc/nano.texi.orig	2022-12-11 22:43:48.399856571 +0100
++++ nano-7.0/doc/nano.texi	2022-12-12 06:29:42.981746935 +0100
 @@ -16,9 +16,9 @@ The complete manual for the GNU nano tex
- @set VERSION 6.3
- @set UPDATED April 2022
+ @set VERSION 7.0
+ @set UPDATED November 2022
  
 -@dircategory Editors
 +@dircategory Editors:
