@@ -1,8 +1,8 @@
---- nano-8.6/doc/nano.texi.orig	2025-08-21 07:45:28.000000000 +0200
-+++ nano-8.6/doc/nano.texi	2025-10-21 22:22:10.780221675 +0200
+--- nano-8.7/doc/nano.texi.orig	2025-11-12 10:36:51.000000000 +0100
++++ nano-8.7/doc/nano.texi	2025-12-09 22:02:01.632984280 +0100
 @@ -16,9 +16,9 @@ The complete manual for the GNU nano tex
- @set VERSION 8.6
- @set UPDATED August 2025
+ @set VERSION 8.7
+ @set UPDATED November 2025
  
 -@dircategory Editors
 +@dircategory Editors:
